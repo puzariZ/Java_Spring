@@ -2,15 +2,20 @@ package com.pujariz.SimpleWebApp.model;
 
 //import lombok.AllArgsConstructor;
 //import lombok.Data;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import org.springframework.stereotype.Component;
 
 //@Data
 //@AllArgsConstructor
 @Component
+@Entity
 public class Product {
 
+    @Id
     private int prodID;
     private String prodName;
+    private int prodPrice;
 
     public Product() {
     }
@@ -53,6 +58,4 @@ public class Product {
     public void setProdID(int prodID) {
         this.prodID = prodID;
     }
-
-    private int prodPrice;
 }
